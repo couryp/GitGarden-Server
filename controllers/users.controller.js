@@ -1,3 +1,3 @@
-const usersModel = require('../models/users.model')
+const usersModel = require('../models/users.models')
 
 module.exports = {}
