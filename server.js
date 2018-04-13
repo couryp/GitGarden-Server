@@ -5,38 +5,17 @@ const path = require('path');
 const app = express();
 const cors = require('cors')
 const axios = require('axios')
+require('dotenv').config()
 
 app.use(cors())
 app.use(bodyParser.json());
-/*
-"url": "https://gateway.watsonplatform.net/tone-analyzer/api",
-"username": "7019706e-eb00-4ce1-a88b-fde32f54ff20",
-"password": "7HBHTFHvHXXq"*/
 
-/*
-let analyzeCommitTone = () => {
-  return axios({
-       method: 'post',
-       url: 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2016-05-19',
-       data: { "text": 'god damnit charlie this better be negative. im so angry. and mad. and grumpy. and not confident. not positive'},
-       auth: {
-         username: "7019706e-eb00-4ce1-a88b-fde32f54ff20",
-         password: "7HBHTFHvHXXq"
-       }
-     })
-}
 
-analyzeCommitTone()
-  .then(res => {
-    debugger
-    console.log(res)
-  })
-  .catch(err => {
-    console.log(err)
-  })
-*/
-const { usersRouter } = require('./routes')
+
+
+const { usersRouter, watsonRouter } = require('./routes')
 app.use('/users', usersRouter)
+app.use('/watson', watsonRouter)
 
 app.use((req, res) => {
   const status = 404;

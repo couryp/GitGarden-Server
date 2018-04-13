@@ -1,3 +1,4 @@
 module.exports = {
-  usersRouter: require('./users.routes')
+  usersRouter: require('./users.routes'),
+  watsonRouter: require('./watson.routes')
 }
