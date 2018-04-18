@@ -1,3 +1,3 @@
 module.exports = {
-  usersModel: require('./users.model')
+  commitsModel: require('./commits.model')
 }

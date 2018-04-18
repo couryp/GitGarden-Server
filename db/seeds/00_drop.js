@@ -1,5 +1,4 @@
-
 exports.seed = function(knex, Promise) {
-  return knex('users').del()
-    // .then(() => knex('learn').del())
+  return knex('commits').del()
+    // .then(() => knex('').del())
 }

@@ -1,4 +1,4 @@
 module.exports = {
-  usersController: require('./users.controller'),
+  commitsController: require('./commits.controller'),
   watsonController: require('./watson.controller')
 }

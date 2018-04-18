@@ -1,4 +1,4 @@
 module.exports = {
-  usersRouter: require('./users.routes'),
+  commitsRouter: require('./commits.routes'),
   watsonRouter: require('./watson.routes')
 }

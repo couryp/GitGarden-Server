@@ -9,12 +9,10 @@ require('dotenv').config()
 
 app.use(cors())
 app.use(bodyParser.json());
+app.use(morgan('dev'))
 
-
-
-
-const { usersRouter, watsonRouter } = require('./routes')
-app.use('/users', usersRouter)
+const { commitsRouter, watsonRouter } = require('./routes')
+app.use('/commits', commitsRouter)
 app.use('/watson', watsonRouter)
 
 app.use((req, res) => {

@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/gitgarden_dev',
+    connection: 'postgres://localhost/gitgalaxy_dev',
     migrations: {
       directory: path.join(__dirname, 'db', 'migrations')
     },
@@ -15,7 +15,7 @@ module.exports = {
 
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/gitgarden_test',
+    connection: 'postgres://localhost/gitgalaxy_test',
     migrations: {
       directory: path.join(__dirname, 'db', 'migrations')
     },
