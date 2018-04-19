@@ -14,6 +14,12 @@ Git Galaxy is a React browser application that visually represents a user's rece
 * [Node.js](https://nodejs.org/en/) - Node
 * [PostgreSQL](https://www.postgresql.org/) - PostgreSQL
 
+## Looking Forward
+
+* More data interactivity
+* Different representation of the data. Possibly with OBJ/MTL files
+* Multi-galaxy view
+
 ## Developers
 
-* **Patrick Coury** - [Patriks's GitHub](https://github.com/couryp)
+* **Patrick Coury** - [Patricks's GitHub](https://github.com/couryp)
