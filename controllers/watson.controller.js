@@ -34,7 +34,7 @@ let analyzeTone = (req, res, next) => {
 
   axios.get(`https://api.github.com/users/${req.body.username}/repos?sort=pushed`)
   .then(result => {
-    const repos = result.data.slice(0,3)
+    const repos = result.data.slice(0,7)
     console.log('REPOS', repos);
     // let helper = repos[0].full_name
     let reposPromises = repos.map(repo =>
