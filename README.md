@@ -23,3 +23,20 @@ Git Galaxy is a React browser application that visually represents a user's rece
 ## Developers
 
 * **Patrick Coury** - [Patricks's GitHub](https://github.com/couryp)
+
+## Links
+
+* [https://github.com/couryp/GitGarden-Client](https://github.com/couryp/GitGarden-Client)
+* [https://github.com/couryp/GitGarden-Server](https://github.com/couryp/GitGarden-Server)
+* [http://hangul.surge.sh/](http://hangul.surge.sh/)
+
+## Screenshots
+
+## Splash Screen:
+![Alt text](./assets/galaxy1.png)
+
+## Study Korean Characters:
+![Alt text](./assets/galaxy2.png)
+
+## Quiz Yourself:
+![Alt text](./assets/galaxy3.png)

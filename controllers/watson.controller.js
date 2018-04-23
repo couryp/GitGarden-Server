@@ -30,21 +30,34 @@ const commitsModel = require('../models/commits.models')
 const axios = require('axios')
 
 let analyzeTone = (req, res, next) => {
-  console.log('analyzing tone')
+  // console.log('analyzing tone')
 
   axios.get(`https://api.github.com/users/${req.body.username}/repos?sort=pushed`)
   .then(result => {
     const repos = result.data.slice(0,7)
-    console.log('REPOS', repos);
+    // console.log('REPOS', repos);
     // let helper = repos[0].full_name
     let reposPromises = repos.map(repo =>
-    axios.get(`https://api.github.com/repos/${repo.full_name}/commits`,{headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}}))
+    axios.get(`https://api.github.com/repos/${repo.full_name}/commits`,{headers: {Authorization: `token ${process.env.GITHUB_TOKEN}`}}
+    ).catch(error => {
+      console.log('Big Err', error);
+      return null
+      // return {
+      //   data: []
+      // }
+    }))
+
     // debugger
     Promise.all(reposPromises)
       .then(repos => {
+        console.log('repos', repos);
         // debugger
-        let arrayOfReposCommits = repos.map(repo => {
+        let arrayOfReposCommits = repos.filter(repo => {
           // debugger
+          if (!repo) {
+            return false
+          }
+
           return repo.data.reduce((messages, currentMessage) => {
             // ORIGINAL return [...messages, currentMessage.commit.message]
             return [...messages, {repo: currentMessage.commit.message, sha: currentMessage.sha}]
