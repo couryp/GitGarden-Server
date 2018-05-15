@@ -43,4 +43,4 @@ Git Galaxy is a React browser application that visually represents a user's rece
 
 ## Git Garden?
 
-Originally, the plan was to create a garden with moveable obj/mtl files and represent data in the forms of trees and flowers within a grass canvas. This scene took too long to create something I was satisfied with and eventually I pivoted to a galaxy theme. I made this decision because rendering geometry was simpler to pick up within the time frame of this project. The Test.js component is evidence of this. Now, the repository name will remain as a reminder of this process.
+Originally, the plan was to create a garden with moveable obj/mtl files and represent data in the forms of trees and flowers within a grass canvas. This scene took too long to create something I was satisfied with and eventually I pivoted to a galaxy theme. I made this decision because rendering geometry was simpler to pick up within the time frame of this project. The Test.js component is evidence of this.
